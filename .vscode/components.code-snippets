@@ -1,0 +1,50 @@
+{
+  "Component without props": {
+    "scope": "typescriptreact",
+    "prefix": "rnc",
+    "body": [
+      "import React from 'react';",
+      "import { StyleSheet, View } from 'react-native';",
+      "",
+      "const ${1:Component}: React.FC = () => {",
+      "  return (",
+      "    <View style={styles.container}>",
+      "      <></>",
+      "    </View>",
+      "  );",
+      "};",
+      "",
+      "const styles = StyleSheet.create({",
+      "  container: {},",
+      "});",
+      "",
+      "export default ${1:Component};",
+      ""
+    ]
+  },
+  "Component with props": {
+    "scope": "typescriptreact",
+    "prefix": "rncp",
+    "body": [
+      "import React from 'react';",
+      "import { StyleSheet, View } from 'react-native';",
+      "",
+      "export type ${1:Component}Props = {};",
+      "",
+      "const ${1:Component}: React.FC<${1:Component}Props> = (props) => {",
+      "  return (",
+      "    <View style={styles.container}>",
+      "      <></>",
+      "    </View>",
+      "  );",
+      "};",
+      "",
+      "const styles = StyleSheet.create({",
+      "  container: {},",
+      "});",
+      "",
+      "export default ${1:Component};",
+      ""
+    ]
+  }
+}
