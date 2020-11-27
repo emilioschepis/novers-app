@@ -2,6 +2,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import React, { useEffect, useState } from 'react';
+import { StatusBar } from 'react-native';
 
 import HomeScreen from './src/screens/home/HomeScreen';
 import PackagesContext from './src/state/PackagesContext';
@@ -36,6 +37,7 @@ const App: React.FC = () => {
 
   return (
     <PackagesContext.Provider value={{ names, addName, removeName }}>
+      <StatusBar barStyle="dark-content" />
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen name="Home" component={HomeScreen} />

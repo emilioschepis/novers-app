@@ -12,6 +12,7 @@ const SearchBar: React.FC<SearchBarProps> = (props) => {
   return (
     <View style={styles.container}>
       <TextInput
+        enablesReturnKeyAutomatically
         autoCorrect={false}
         value={props.search}
         placeholder={props.placeholder}

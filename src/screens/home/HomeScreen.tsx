@@ -35,7 +35,8 @@ const styles = StyleSheet.create({
   },
 
   searchContainer: {
-    margin: 16,
+    marginTop: 16,
+    marginHorizontal: 16,
   },
 });
 
