@@ -22,11 +22,6 @@ const PackageRow: React.FC<PackageRowProps> = (props) => {
         <Text style={styles.nameText}>{props.package.name}</Text>
         <Text>{format(props.package.modifiedAt)}</Text>
       </View>
-      {props.package.description && (
-        <View style={styles.descriptionContainer}>
-          <Text>{props.package.description}</Text>
-        </View>
-      )}
       <View style={styles.versionContainer}>
         <Text style={styles.versionText}>{props.package.version}</Text>
       </View>
@@ -38,11 +33,6 @@ const PackageRow: React.FC<PackageRowProps> = (props) => {
             onPress={() => openLink(`https://www.npmjs.com/package/${props.package.name}`)}
           />
         </View>
-        {props.package.homepage && (
-          <View style={styles.buttonWrapper}>
-            <Button text="View homepage" color="#333333" onPress={() => openLink(props.package.homepage!)} />
-          </View>
-        )}
       </ScrollView>
     </Pressable>
   );
@@ -63,9 +53,6 @@ const styles = StyleSheet.create({
   nameText: {
     fontWeight: 'bold',
     fontSize: 18,
-  },
-  descriptionContainer: {
-    marginTop: 8,
   },
   versionContainer: {
     marginTop: 8,

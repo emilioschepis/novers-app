@@ -9,15 +9,18 @@ export default (names: string[]) => {
   const [error, setError] = useState<any | undefined>();
 
   useEffect(() => {
+    setLoading(true);
+
     api
       .fetchPackages(names)
       .then((packages) => {
-        setLoading(false);
         setData(packages);
       })
       .catch((error) => {
-        setLoading(false);
         setError(error);
+      })
+      .finally(() => {
+        setLoading(false);
       });
   }, [names]);
 
